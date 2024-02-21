@@ -1,0 +1,19 @@
+{% extends 'car_dealer/base.html' %}
+{% block content %}
+{% csrf_token %}
+<div class="w3-bar w3-black w3-large">
+  <div class="w3-bar-item w3-left w3-black">Car Dealer Portal: {{user.username}}</div>
+  <a class="w3-bar-item w3-btn w3-teal w3-right" href="/dealer/logout/">Logout</a>
+  <a class="w3-bar-item w3-btn w3-teal w3-right " href="/dealer/auth/">Home</a>
+  <a class="w3-bar-item w3-btn w3-teal w3-right" href="/dealer/order_list/">Orders</a>
+  <a class="w3-bar-item w3-btn w3-teal w3-right" href="/dealer/manage_vehicles/">Vehicles</a>
+  <a class="w3-bar-item w3-btn w3-teal w3-right" href="/dealer/history/">Earnings</a>
+</div>
+
+<div class="w3-display-container" style="height:300px;">
+  <div class="w3-display-middle">
+    Vehicle Details Added! <br><br>
+    <a href="/dealer/index/">Back To Home Page</a>
+</div>
+</div>
+{% endblock %}
